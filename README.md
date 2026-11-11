@@ -50,3 +50,7 @@ Override keys in `~/Library/Application Support/PromptPad/layout.json` (**Custom
 ## License
 
 [MIT](LICENSE). Claude, ChatGPT, VS Code, Chrome and Keychron are trademarks of their respective owners.
+
+---
+
+<p align="center">Built by <a href="https://cartemis-ai.com/">Cartemis AI</a></p>

@@ -50,3 +50,7 @@ git clone https://github.com/CartemisAI/PromptPad.git && cd PromptPad
 ## 许可
 
 [MIT](LICENSE)。Claude、ChatGPT、VS Code、Chrome 和 Keychron 是其各自所有者的商标。
+
+---
+
+<p align="center">由 <a href="https://cartemis-ai.com/">Cartemis AI</a> 开发</p>
