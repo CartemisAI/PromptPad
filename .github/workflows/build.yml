@@ -1,0 +1,17 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the layout
+        run: python3 scripts/check-layout.py --public
+      - name: Key docs up to date
+        run: python3 scripts/make-keys-doc.py && git diff --exit-code docs/keys.md docs/keys.zh-CN.md
+      - name: Build (public, Apple silicon + Intel)
+        run: ./build.sh --public --universal --no-install

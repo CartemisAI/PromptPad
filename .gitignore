@@ -1,0 +1,4 @@
+build/
+# Your own add-ons and build settings: built in locally, never published.
+personal/
+.DS_Store

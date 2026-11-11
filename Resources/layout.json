@@ -1,0 +1,1734 @@
+{
+ "about": "PromptPad's default layout: the code each key sends on each layer (\"code\", QMK keycode in hex), what the key map shows (\"show\"), what each key combo does in each app (\"actions\"), and the apps it knows (\"apps\"). Don't edit this file to make it yours: put only your changes in ~/Library/Application Support/PromptPad/layout.json, which is merged on top. Interface texts are English; Resources/i18n/zh-Hans.json has the Chinese.",
+ "device": {
+  "name": "Keychron K0 Max",
+  "vendorID": "0x3434",
+  "productID": "0x0A06",
+  "factory": "factory-k0max.txt"
+ },
+ "layers": {
+  "base": 0,
+  "fn": 1,
+  "m3": 2
+ },
+ "layerNames": {
+  "base": "Base",
+  "fn": "Hold Fn",
+  "m3": "Hold M4"
+ },
+ "apps": [
+  {
+   "id": "claude",
+   "name": "Claude",
+   "bundle": "com.anthropic.claudefordesktop",
+   "ai": true,
+   "voice": "shortcut",
+   "voiceKeys": "cmd+d"
+  },
+  {
+   "id": "chatgpt",
+   "name": "ChatGPT",
+   "bundle": "com.openai.codex",
+   "ai": true,
+   "voice": "button",
+   "realClick": true
+  },
+  {
+   "id": "vscode",
+   "name": "VS Code",
+   "bundle": "com.microsoft.VSCode",
+   "voice": "off"
+  },
+  {
+   "id": "chrome",
+   "name": "Chrome",
+   "bundle": "com.google.Chrome",
+   "voice": "system"
+  }
+ ],
+ "encoder": {
+  "base": {
+   "ccw": "096d",
+   "cw": "096e"
+  },
+  "fn": {
+   "ccw": "7828",
+   "cw": "7827"
+  },
+  "m3": {
+   "ccw": "022b",
+   "cw": "002b"
+  }
+ },
+ "keys": {
+  "knob": {
+   "legend": "Knob",
+   "pos": [
+    0,
+    0
+   ],
+   "base": {
+    "code": "006b",
+    "show": {
+     "*": [
+      "Move cursor",
+      "dial.medium",
+      "nav",
+      "Turn: move the cursor left and right."
+     ],
+     "claude": [
+      "Move cursor\nBack to box",
+      "dial.medium",
+      "nav",
+      "Turn: move one character left or right. Press: put the cursor back in the message box."
+     ],
+     "chatgpt": [
+      "Move cursor\nBack to box",
+      "dial.medium",
+      "nav",
+      "Turn: move one character left or right. Press: put the cursor back in the message box."
+     ],
+     "vscode": [
+      "Scroll\nOpen file",
+      "dial.medium",
+      "nav",
+      "Turn: scroll the editor two lines per step; move up and down in the Explorer, lists and Cmd+P. Press: open the file selected in the Explorer."
+     ]
+    }
+   },
+   "fn": {
+    "code": "7820",
+    "show": {
+     "*": [
+      "Brightness\nBacklight",
+      "sun.max",
+      "sys",
+      "Hold Fn and turn: backlight brightness. Press: backlight on / off."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0001",
+    "show": {
+     "*": [
+      "App switcher",
+      "square.stack.3d.up",
+      "app",
+      "Hold M4 and turn: pick an app in the app switcher; let go of M4 to switch."
+     ]
+    }
+   }
+  },
+  "esc": {
+   "legend": "Esc",
+   "pos": [
+    0,
+    1
+   ],
+   "base": {
+    "code": "0029",
+    "show": {
+     "*": [
+      "Esc",
+      "escape",
+      "sys",
+      "Esc。"
+     ],
+     "claude": [
+      "Esc",
+      "escape",
+      "sys",
+      "Esc. Stops Claude's reply; press twice to go back to an earlier message."
+     ]
+    }
+   },
+   "fn": {
+    "code": "7e0b",
+    "show": {
+     "*": [
+      "Bluetooth 1",
+      "dot.radiowaves.left.and.right",
+      "sys",
+      "Switch to Bluetooth device 1."
+     ]
+    }
+   }
+  },
+  "del": {
+   "legend": "Del",
+   "pos": [
+    0,
+    2
+   ],
+   "base": {
+    "code": "016a",
+    "show": {
+     "*": [
+      "Delete word",
+      "delete.left.fill",
+      "edit",
+      "Delete the word before the cursor (Option+Delete)."
+     ],
+     "vscode": [
+      "Off",
+      "delete.left.fill",
+      "none",
+      "Word delete does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0b69",
+    "show": {
+     "*": [
+      "Fwd delete word",
+      "delete.right.fill",
+      "edit",
+      "Delete the word right of the cursor."
+     ],
+     "vscode": [
+      "Off",
+      "delete.right.fill",
+      "none",
+      "Forward word delete does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0000",
+    "show": {
+     "*": null
+    }
+   }
+  },
+  "tab": {
+   "legend": "Tab",
+   "pos": [
+    0,
+    3
+   ],
+   "base": {
+    "code": "016c",
+    "show": {
+     "*": [
+      "Next field",
+      "arrow.right.to.line",
+      "nav",
+      "Tab: go to the next button, link or field."
+     ],
+     "vscode": [
+      "Off",
+      "arrow.right.to.line",
+      "none",
+      "Tab does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0001",
+    "show": {
+     "*": [
+      "Previous field",
+      "arrow.left.to.line",
+      "nav",
+      "Shift+Tab: back to the previous button, link or field."
+     ],
+     "vscode": [
+      "Off",
+      "arrow.left.to.line",
+      "none",
+      "Shift+Tab does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0000",
+    "show": {
+     "*": null
+    }
+   }
+  },
+  "bksp": {
+   "legend": "Bksp",
+   "pos": [
+    0,
+    4
+   ],
+   "base": {
+    "code": "0169",
+    "show": {
+     "*": [
+      "Delete",
+      "delete.left",
+      "edit",
+      "Delete the character before the cursor."
+     ],
+     "vscode": [
+      "Off",
+      "delete.left",
+      "none",
+      "Delete does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0b6c",
+    "show": {
+     "*": [
+      "Fwd delete",
+      "delete.right",
+      "edit",
+      "Delete the character right of the cursor."
+     ],
+     "vscode": [
+      "Off",
+      "delete.right",
+      "none",
+      "Forward delete does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0000",
+    "show": {
+     "*": null
+    }
+   }
+  },
+  "m1": {
+   "legend": "M1",
+   "pos": [
+    1,
+    0
+   ],
+   "base": {
+    "code": "0069",
+    "show": {
+     "*": [
+      "Claude",
+      "sparkle",
+      "app",
+      "Switch to Claude from anywhere."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0b6b",
+    "show": {
+     "*": [
+      "Switch mic",
+      "mic.circle",
+      "voice",
+      "The first press shows the microphone list with the one in use highlighted; press again while it's up for the next one. It closes after 3 seconds. You can also pick one from the menu bar."
+     ]
+    }
+   }
+  },
+  "m2": {
+   "legend": "M2",
+   "pos": [
+    2,
+    0
+   ],
+   "base": {
+    "code": "006a",
+    "show": {
+     "*": [
+      "ChatGPT",
+      "bubble.left",
+      "app",
+      "Switch to ChatGPT from anywhere."
+     ]
+    }
+   },
+   "fn": {
+    "code": "7e0c",
+    "show": {
+     "*": [
+      "Bluetooth 2",
+      "dot.radiowaves.left.and.right",
+      "sys",
+      "Switch to Bluetooth device 2."
+     ]
+    }
+   }
+  },
+  "m3": {
+   "legend": "M3",
+   "pos": [
+    3,
+    0
+   ],
+   "base": {
+    "code": "0969",
+    "show": {
+     "*": [
+      "Cycle apps",
+      "arrow.triangle.2.circlepath",
+      "app",
+      "Cycle through Chrome and VS Code."
+     ]
+    }
+   },
+   "fn": {
+    "code": "7e0e",
+    "show": {
+     "*": [
+      "2.4G",
+      "antenna.radiowaves.left.and.right",
+      "sys",
+      "Switch to the 2.4 GHz receiver."
+     ]
+    }
+   },
+   "m3": {
+    "code": "002b",
+    "show": {
+     "*": [
+      "Next app",
+      "arrow.right.square",
+      "app",
+      "Select the next app in the app switcher."
+     ]
+    }
+   }
+  },
+  "m4": {
+   "legend": "M4",
+   "pos": [
+    4,
+    0
+   ],
+   "base": {
+    "code": "5048",
+    "show": {
+     "*": [
+      "Hold for\nCommand",
+      "command",
+      "app",
+      "Hold: the keypad holds Command. With a digit: switch session; with Enter: send later; turn the knob or press M3: pick an app."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0835",
+    "show": {
+     "*": [
+      "Switch window",
+      "macwindow.on.rectangle",
+      "app",
+      "Switch between windows of the same app (backwards)."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0001",
+    "show": {
+     "*": [
+      "Holding",
+      "command",
+      "app",
+      "The keypad holds Command."
+     ]
+    }
+   }
+  },
+  "fn": {
+   "legend": "Fn",
+   "pos": [
+    5,
+    0
+   ],
+   "base": {
+    "code": "5022",
+    "show": {
+     "*": [
+      "Fn layer",
+      "square.grid.2x2",
+      "sys",
+      "Hold for the Fn layer: panels, sessions and quick replies. It also holds Shift, so the key map can tell."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0001",
+    "show": {
+     "*": [
+      "Holding",
+      "square.grid.2x2.fill",
+      "sys",
+      "The Fn layer."
+     ]
+    }
+   }
+  },
+  "numlock": {
+   "legend": "Num",
+   "pos": [
+    1,
+    1
+   ],
+   "base": {
+    "code": "0852",
+    "show": {
+     "*": [
+      "To start",
+      "arrow.up.to.line",
+      "nav",
+      "Jump to the start of the text or file (Command+↑)."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0b6f",
+    "show": {
+     "*": [
+      "Key map",
+      "keyboard",
+      "sys",
+      "Show or hide this key map; Esc also closes it."
+     ]
+    }
+   }
+  },
+  "slash": {
+   "legend": "/",
+   "pos": [
+    1,
+    2
+   ],
+   "base": {
+    "code": "0450",
+    "show": {
+     "*": [
+      "Word ←",
+      "chevron.left.2",
+      "nav",
+      "Move one word left (Option+←)."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0a6e",
+    "show": {
+     "*": null,
+     "claude": [
+      "Continue",
+      "text.bubble",
+      "ai",
+      "Pastes and sends “Continue.”"
+     ],
+     "chatgpt": [
+      "Continue",
+      "text.bubble",
+      "ai",
+      "Pastes and sends “Continue.”"
+     ],
+     "vscode": [
+      "Sidebar",
+      "sidebar.left",
+      "nav",
+      "Show or hide the sidebar on the left."
+     ]
+    }
+   }
+  },
+  "star": {
+   "legend": "*",
+   "pos": [
+    1,
+    3
+   ],
+   "base": {
+    "code": "044f",
+    "show": {
+     "*": [
+      "Word →",
+      "chevron.right.2",
+      "nav",
+      "Move one word right (Option+→)."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0a6f",
+    "show": {
+     "*": null,
+     "claude": [
+      "Go ahead",
+      "checkmark.bubble",
+      "ai",
+      "Pastes and sends “Yes, go ahead.”"
+     ],
+     "chatgpt": [
+      "Go ahead",
+      "checkmark.bubble",
+      "ai",
+      "Pastes and sends “Yes, go ahead.”"
+     ],
+     "vscode": [
+      "Chat panel",
+      "sidebar.right",
+      "nav",
+      "Show or hide the chat panel on the right (Copilot and others)."
+     ]
+    }
+   }
+  },
+  "minus": {
+   "legend": "−",
+   "pos": [
+    1,
+    4
+   ],
+   "base": {
+    "code": "0851",
+    "show": {
+     "*": [
+      "To end",
+      "arrow.down.to.line",
+      "nav",
+      "Jump to the end (Command+↓)."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0b68",
+    "show": {
+     "*": null,
+     "claude": [
+      "Run tests",
+      "checklist",
+      "ai",
+      "Pastes and sends “Run the tests and fix any that fail.”"
+     ],
+     "chatgpt": [
+      "Run tests",
+      "checklist",
+      "ai",
+      "Pastes and sends “Run the tests and fix any that fail.”"
+     ],
+     "vscode": [
+      "Editor only",
+      "arrow.down.right.and.arrow.up.left",
+      "nav",
+      "Keep only the Explorer and the editor: close the preview column, the terminal and the chat panel."
+     ]
+    }
+   }
+  },
+  "7": {
+   "legend": "7",
+   "pos": [
+    2,
+    1
+   ],
+   "base": {
+    "code": "0000",
+    "show": {
+     "*": [
+      "Unused",
+      "circle.dashed",
+      "none",
+      "Types nothing, so stray presses do no harm."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0a68",
+    "show": {
+     "*": null,
+     "claude": [
+      "Side Chat",
+      "bubble.left.and.text.bubble.right",
+      "ai",
+      "Open a side chat to ask a question while the main session keeps working."
+     ],
+     "chatgpt": [
+      "Temporary chat",
+      "bubble.left.and.text.bubble.right",
+      "ai",
+      "Start a temporary chat."
+     ],
+     "vscode": [
+      "Source control",
+      "arrow.triangle.branch",
+      "ai",
+      "Open source control to see what changed."
+     ],
+     "chrome": [
+      "Reopen tab",
+      "arrow.uturn.left.square",
+      "nav",
+      "Reopen the tab you just closed."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0024",
+    "show": {
+     "*": [
+      "Cmd+7",
+      "number.square",
+      "nav",
+      "Command+7。"
+     ],
+     "claude": [
+      "Session 7",
+      "number.square",
+      "nav",
+      "Command+7: jump to session 7."
+     ],
+     "chrome": [
+      "Tab 7",
+      "number.square",
+      "nav",
+      "Command+7: jump to tab 7."
+     ],
+     "vscode": [
+      "Tab 7",
+      "number.square",
+      "nav",
+      "Command+7: jump to tab 7 in this column."
+     ]
+    }
+   }
+  },
+  "8": {
+   "legend": "8",
+   "pos": [
+    2,
+    2
+   ],
+   "base": {
+    "code": "004b",
+    "show": {
+     "*": [
+      "Page up",
+      "chevron.up.2",
+      "nav",
+      "Scroll up one page."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0369",
+    "show": {
+     "*": null,
+     "claude": [
+      "Previous session",
+      "chevron.up.square",
+      "nav",
+      "Switch to the previous session."
+     ],
+     "chatgpt": [
+      "Previous chat",
+      "chevron.up.square",
+      "nav",
+      "Switch to the previous chat."
+     ],
+     "vscode": [
+      "Go to symbol",
+      "list.bullet.indent",
+      "nav",
+      "List the headings and symbols in this file; choose with 9, 3 or the knob, Enter jumps there."
+     ],
+     "chrome": [
+      "Previous tab",
+      "chevron.up.square",
+      "nav",
+      "Switch to the previous tab."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0025",
+    "show": {
+     "*": [
+      "Cmd+8",
+      "number.square",
+      "nav",
+      "Command+8。"
+     ],
+     "claude": [
+      "Session 8",
+      "number.square",
+      "nav",
+      "Command+8: jump to session 8."
+     ],
+     "chrome": [
+      "Tab 8",
+      "number.square",
+      "nav",
+      "Command+8: jump to tab 8."
+     ],
+     "vscode": [
+      "Tab 8",
+      "number.square",
+      "nav",
+      "Command+8: jump to tab 8 in this column."
+     ]
+    }
+   }
+  },
+  "9": {
+   "legend": "9",
+   "pos": [
+    2,
+    3
+   ],
+   "base": {
+    "code": "006e",
+    "show": {
+     "*": [
+      "Scroll up a little",
+      "chevron.up",
+      "nav",
+      "Scroll the page a little."
+     ],
+     "claude": [
+      "Scroll up a little",
+      "chevron.up",
+      "nav",
+      "Scroll the conversation a little; hold to keep going. Works wherever the cursor and pointer are."
+     ],
+     "chatgpt": [
+      "Scroll up a little",
+      "chevron.up",
+      "nav",
+      "Scroll the conversation a little; hold to keep going. Works wherever the cursor and pointer are."
+     ],
+     "vscode": [
+      "Up one",
+      "chevron.up",
+      "nav",
+      "In the Explorer: select the previous or next item. In the editor: move a line."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0b6a",
+    "show": {
+     "*": null,
+     "claude": [
+      "New session",
+      "plus.bubble",
+      "ai",
+      "Start a new session."
+     ],
+     "chatgpt": [
+      "New chat",
+      "plus.bubble",
+      "ai",
+      "Start a new chat."
+     ],
+     "vscode": [
+      "Terminal",
+      "terminal",
+      "ai",
+      "Show or hide the terminal."
+     ],
+     "chrome": [
+      "Address bar",
+      "link",
+      "nav",
+      "Jump to the address bar, then say the address or what to search for."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0026",
+    "show": {
+     "*": [
+      "Cmd+9",
+      "number.square",
+      "nav",
+      "Command+9。"
+     ],
+     "claude": [
+      "Session 9",
+      "number.square",
+      "nav",
+      "Command+9: jump to session 9."
+     ],
+     "chrome": [
+      "Tab 9",
+      "number.square",
+      "nav",
+      "Command+9: jump to tab 9."
+     ],
+     "vscode": [
+      "Tab 9",
+      "number.square",
+      "nav",
+      "Command+9: jump to tab 9 in this column."
+     ]
+    }
+   }
+  },
+  "plus": {
+   "legend": "+",
+   "pos": [
+    2,
+    4
+   ],
+   "base": {
+    "code": "016d",
+    "show": {
+     "*": [
+      "New line",
+      "return.left",
+      "edit",
+      "New line without sending (Shift+Return)."
+     ],
+     "vscode": [
+      "Next file",
+      "arrow.down.doc",
+      "nav",
+      "Open the next file in Explorer order; the preview follows."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0001",
+    "show": {
+     "*": null,
+     "vscode": [
+      "Previous file",
+      "arrow.up.doc",
+      "nav",
+      "Open the previous file in Explorer order."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0000",
+    "show": {
+     "*": null
+    }
+   }
+  },
+  "4": {
+   "legend": "4",
+   "pos": [
+    3,
+    1
+   ],
+   "base": {
+    "code": "0050",
+    "show": {
+     "*": [
+      "Left",
+      "arrow.left",
+      "nav",
+      "Cursor left one step."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0a69",
+    "show": {
+     "*": null,
+     "claude": [
+      "Changes",
+      "plusminus",
+      "ai",
+      "Open the changes panel to see what Claude changed."
+     ],
+     "chatgpt": [
+      "Review",
+      "plusminus",
+      "ai",
+      "Open the review panel."
+     ],
+     "vscode": [
+      "Tab left",
+      "chevron.left.square",
+      "nav",
+      "Switch to the tab on the left in this column."
+     ],
+     "chrome": [
+      "Back",
+      "chevron.backward",
+      "nav",
+      "Go back a page."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0021",
+    "show": {
+     "*": [
+      "Cmd+4",
+      "number.square",
+      "nav",
+      "Command+4。"
+     ],
+     "claude": [
+      "Session 4",
+      "number.square",
+      "nav",
+      "Command+4: jump to session 4."
+     ],
+     "chrome": [
+      "Tab 4",
+      "number.square",
+      "nav",
+      "Command+4: jump to tab 4."
+     ],
+     "vscode": [
+      "Tab 4",
+      "number.square",
+      "nav",
+      "Command+4: jump to tab 4 in this column."
+     ]
+    }
+   }
+  },
+  "5": {
+   "legend": "5",
+   "pos": [
+    3,
+    2
+   ],
+   "base": {
+    "code": "016b",
+    "show": {
+     "*": [
+      "Space",
+      "space",
+      "edit",
+      "Space."
+     ],
+     "vscode": [
+      "Off",
+      "space",
+      "none",
+      "Space does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0a6a",
+    "show": {
+     "*": null,
+     "claude": [
+      "Mode menu",
+      "list.bullet.rectangle",
+      "ai",
+      "Open the mode menu, then choose Plan mode with a digit on the main keyboard (the keypad no longer types digits)."
+     ],
+     "vscode": [
+      "Close tab",
+      "xmark.square",
+      "nav",
+      "Close this tab. With unsaved changes you're asked first (Esc cancels); Fn+3 drops the changes instead."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0022",
+    "show": {
+     "*": [
+      "Cmd+5",
+      "number.square",
+      "nav",
+      "Command+5。"
+     ],
+     "claude": [
+      "Session 5",
+      "number.square",
+      "nav",
+      "Command+5: jump to session 5."
+     ],
+     "chrome": [
+      "Tab 5",
+      "number.square",
+      "nav",
+      "Command+5: jump to tab 5."
+     ],
+     "vscode": [
+      "Tab 5",
+      "number.square",
+      "nav",
+      "Command+5: jump to tab 5 in this column."
+     ]
+    }
+   }
+  },
+  "6": {
+   "legend": "6",
+   "pos": [
+    3,
+    3
+   ],
+   "base": {
+    "code": "004f",
+    "show": {
+     "*": [
+      "Right",
+      "arrow.right",
+      "nav",
+      "Cursor right one step."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0a6b",
+    "show": {
+     "*": null,
+     "claude": [
+      "Terminal",
+      "terminal",
+      "ai",
+      "Show or hide the terminal."
+     ],
+     "chatgpt": [
+      "Terminal",
+      "terminal",
+      "ai",
+      "Open the terminal (Fn+3 hides the bottom panel again)."
+     ],
+     "vscode": [
+      "Tab right",
+      "chevron.right.square",
+      "nav",
+      "Switch to the tab on the right in this column."
+     ],
+     "chrome": [
+      "Forward",
+      "chevron.forward",
+      "nav",
+      "Go forward a page."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0023",
+    "show": {
+     "*": [
+      "Cmd+6",
+      "number.square",
+      "nav",
+      "Command+6。"
+     ],
+     "claude": [
+      "Session 6",
+      "number.square",
+      "nav",
+      "Command+6: jump to session 6."
+     ],
+     "chrome": [
+      "Tab 6",
+      "number.square",
+      "nav",
+      "Command+6: jump to tab 6."
+     ],
+     "vscode": [
+      "Tab 6",
+      "number.square",
+      "nav",
+      "Command+6: jump to tab 6 in this column."
+     ]
+    }
+   }
+  },
+  "1": {
+   "legend": "1",
+   "pos": [
+    4,
+    1
+   ],
+   "base": {
+    "code": "096c",
+    "show": {
+     "*": [
+      "Comma ,",
+      "character.textbox",
+      "edit",
+      "Types a comma “,” whatever the input method."
+     ],
+     "vscode": [
+      "Off",
+      "character.textbox",
+      "none",
+      "Comma does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0a6c",
+    "show": {
+     "*": null,
+     "claude": [
+      "Files",
+      "folder",
+      "ai",
+      "Open the files panel."
+     ],
+     "chatgpt": [
+      "File tree",
+      "folder",
+      "ai",
+      "Open the file tree."
+     ],
+     "vscode": [
+      "Explorer ⇄ editor",
+      "sidebar.left",
+      "nav",
+      "In the Explorer: back to the file you're reading. Anywhere else: jump to the Explorer."
+     ]
+    }
+   },
+   "m3": {
+    "code": "001e",
+    "show": {
+     "*": [
+      "Cmd+1",
+      "number.square",
+      "nav",
+      "Command+1。"
+     ],
+     "claude": [
+      "Session 1",
+      "number.square",
+      "nav",
+      "Command+1: jump to session 1."
+     ],
+     "chrome": [
+      "Tab 1",
+      "number.square",
+      "nav",
+      "Command+1: jump to tab 1."
+     ],
+     "vscode": [
+      "Tab 1",
+      "number.square",
+      "nav",
+      "Command+1: jump to tab 1 in this column."
+     ]
+    }
+   }
+  },
+  "2": {
+   "legend": "2",
+   "pos": [
+    4,
+    2
+   ],
+   "base": {
+    "code": "004e",
+    "show": {
+     "*": [
+      "Page down",
+      "chevron.down.2",
+      "nav",
+      "Scroll down one page."
+     ]
+    }
+   },
+   "fn": {
+    "code": "036a",
+    "show": {
+     "*": null,
+     "claude": [
+      "Next session",
+      "chevron.down.square",
+      "nav",
+      "Switch to the next session."
+     ],
+     "chatgpt": [
+      "Next chat",
+      "chevron.down.square",
+      "nav",
+      "Switch to the next chat."
+     ],
+     "vscode": [
+      "Close other tabs",
+      "xmark.square.fill",
+      "nav",
+      "Keep only this tab; close the other tabs in this column."
+     ],
+     "chrome": [
+      "Next tab",
+      "chevron.down.square",
+      "nav",
+      "Switch to the next tab."
+     ]
+    }
+   },
+   "m3": {
+    "code": "001f",
+    "show": {
+     "*": [
+      "Cmd+2",
+      "number.square",
+      "nav",
+      "Command+2。"
+     ],
+     "claude": [
+      "Session 2",
+      "number.square",
+      "nav",
+      "Command+2: jump to session 2."
+     ],
+     "chrome": [
+      "Tab 2",
+      "number.square",
+      "nav",
+      "Command+2: jump to tab 2."
+     ],
+     "vscode": [
+      "Tab 2",
+      "number.square",
+      "nav",
+      "Command+2: jump to tab 2 in this column."
+     ]
+    }
+   }
+  },
+  "3": {
+   "legend": "3",
+   "pos": [
+    4,
+    3
+   ],
+   "base": {
+    "code": "006f",
+    "show": {
+     "*": [
+      "Scroll down a little",
+      "chevron.down",
+      "nav",
+      "Scroll the page a little."
+     ],
+     "claude": [
+      "Scroll down a little",
+      "chevron.down",
+      "nav",
+      "Scroll the conversation a little; hold to keep going. Works wherever the cursor and pointer are."
+     ],
+     "chatgpt": [
+      "Scroll down a little",
+      "chevron.down",
+      "nav",
+      "Scroll the conversation a little; hold to keep going. Works wherever the cursor and pointer are."
+     ],
+     "vscode": [
+      "Down one",
+      "chevron.down",
+      "nav",
+      "In the Explorer: select the previous or next item. In the editor: move a line."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0a6d",
+    "show": {
+     "*": null,
+     "claude": [
+      "Close panel",
+      "xmark.rectangle",
+      "ai",
+      "Close the current panel."
+     ],
+     "chatgpt": [
+      "Close bottom panel",
+      "xmark.rectangle",
+      "ai",
+      "Hide the bottom panel."
+     ],
+     "vscode": [
+      "Discard & close",
+      "xmark.bin",
+      "nav",
+      "Drop this file's unsaved changes, go back to the last saved version and close the tab without asking. For when a file got changed by accident."
+     ],
+     "chrome": [
+      "Close tab",
+      "xmark.square",
+      "nav",
+      "Close this tab."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0020",
+    "show": {
+     "*": [
+      "Cmd+3",
+      "number.square",
+      "nav",
+      "Command+3。"
+     ],
+     "claude": [
+      "Session 3",
+      "number.square",
+      "nav",
+      "Command+3: jump to session 3."
+     ],
+     "chrome": [
+      "Tab 3",
+      "number.square",
+      "nav",
+      "Command+3: jump to tab 3."
+     ],
+     "vscode": [
+      "Tab 3",
+      "number.square",
+      "nav",
+      "Command+3: jump to tab 3 in this column."
+     ]
+    }
+   }
+  },
+  "enter": {
+   "legend": "Enter",
+   "pos": [
+    5,
+    4
+   ],
+   "base": {
+    "code": "0168",
+    "show": {
+     "*": [
+      "Send",
+      "paperplane.fill",
+      "send",
+      "Send the message."
+     ],
+     "vscode": [
+      "Open ⇄ Explorer",
+      "return",
+      "send",
+      "In the Explorer: open a file or expand a folder. In the editor or preview: back to the Explorer. In lists and Cmd+P: choose. Does nothing in the terminal."
+     ],
+     "chrome": [
+      "Click",
+      "cursorarrow.click",
+      "send",
+      "Click the selected button or link."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0b6e",
+    "show": {
+     "*": null,
+     "claude": [
+      "Send now",
+      "bolt.fill",
+      "send",
+      "Sends the queued message now (Send now in Claude, Steer in ChatGPT). If the message is still in the box, it is queued first."
+     ],
+     "chatgpt": [
+      "Send now",
+      "bolt.fill",
+      "send",
+      "Sends the queued message now (Send now in Claude, Steer in ChatGPT). If the message is still in the box, it is queued first."
+     ],
+     "vscode": [
+      "Recent files",
+      "clock.arrow.circlepath",
+      "nav",
+      "Open the recent files list: choose with 9, 3 or the knob, Enter opens."
+     ]
+    }
+   },
+   "m3": {
+    "code": "006d",
+    "show": {
+     "*": null,
+     "claude": [
+      "Queue",
+      "clock",
+      "send",
+      "While Claude or ChatGPT is working, the message waits until this turn ends."
+     ],
+     "chatgpt": [
+      "Queue",
+      "clock",
+      "send",
+      "While Claude or ChatGPT is working, the message waits until this turn ends."
+     ]
+    }
+   }
+  },
+  "0": {
+   "legend": "0",
+   "pos": [
+    5,
+    1
+   ],
+   "base": {
+    "code": "0068",
+    "show": {
+     "*": [
+      "Dictation",
+      "mic",
+      "voice",
+      "macOS dictation."
+     ],
+     "claude": [
+      "Voice",
+      "mic.fill",
+      "voice",
+      "Tap to start and tap again to stop, or hold to talk and let go. M4+0 switches to macOS dictation."
+     ],
+     "chatgpt": [
+      "Voice",
+      "mic.fill",
+      "voice",
+      "Tap to start and tap again to stop, or hold to talk and let go. M4+0 switches to macOS dictation."
+     ],
+     "vscode": [
+      "Off",
+      "mic.slash",
+      "none",
+      "Voice is off in VS Code, so code can't change by accident."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0b6d",
+    "show": {
+     "*": null,
+     "vscode": [
+      "Markdown preview",
+      "eye",
+      "ai",
+      "In a Markdown file: open the preview beside it; focus stays on the file and the preview follows when you switch files. Press again to close it. In the Explorer, with a Markdown file selected: open it with its preview."
+     ],
+     "claude": [
+      "Side question",
+      "questionmark.bubble",
+      "voice",
+      "Types /btw at the start of the message box and starts voice: a side question that doesn't interrupt what Claude is doing. Press 0 to stop and Enter to send, or hold to talk and let go."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0001",
+    "show": {
+     "*": [
+      "Switch dictation",
+      "arrow.left.arrow.right",
+      "voice",
+      "Switch between the app's own voice input and macOS dictation; remembered per app."
+     ]
+    }
+   }
+  },
+  "dot": {
+   "legend": ".",
+   "pos": [
+    5,
+    3
+   ],
+   "base": {
+    "code": "016e",
+    "show": {
+     "*": [
+      "Undo",
+      "arrow.uturn.backward",
+      "edit",
+      "Undo (Command+Z)."
+     ],
+     "vscode": [
+      "Off",
+      "arrow.uturn.backward",
+      "none",
+      "Undo does nothing in VS Code, so files can't change by accident."
+     ]
+    }
+   },
+   "fn": {
+    "code": "0001",
+    "show": {
+     "*": [
+      "Redo",
+      "arrow.uturn.forward",
+      "edit",
+      "Redo (Command+Shift+Z): bring back what you undid."
+     ],
+     "vscode": [
+      "Undo",
+      "arrow.uturn.backward",
+      "edit",
+      "Undo the last change in the file (for when a file got changed by accident)."
+     ]
+    }
+   },
+   "m3": {
+    "code": "0000",
+    "show": {
+     "*": null
+    }
+   }
+  }
+ },
+ "actions": {
+  "shift+cmd+f13": {
+   "claude": "keys:cmd+;",
+   "chatgpt": "menu:File>New Temporary Chat",
+   "vscode": "pass",
+   "chrome": "keys:shift+cmd+t"
+  },
+  "shift+cmd+f14": {
+   "claude": "keys:shift+cmd+d",
+   "chatgpt": "menu:View>Toggle Review Panel",
+   "vscode": "pass",
+   "chrome": "keys:cmd+["
+  },
+  "shift+cmd+f15": {
+   "claude": "keys:shift+cmd+m",
+   "vscode": "pass"
+  },
+  "shift+cmd+f16": {
+   "claude": "keys:cmd+j",
+   "chatgpt": "menu:View>Open Terminal",
+   "vscode": "pass",
+   "chrome": "keys:cmd+]"
+  },
+  "shift+cmd+f17": {
+   "claude": "keys:shift+cmd+f",
+   "chatgpt": "menu:View>Toggle File Tree",
+   "vscode": "pass"
+  },
+  "shift+cmd+f18": {
+   "claude": "menu:View>Close Pane",
+   "chatgpt": "menu:View>Toggle Bottom Panel",
+   "vscode": "pass",
+   "chrome": "keys:cmd+w"
+  },
+  "shift+cmd+f19": {
+   "claude": "say:Continue.",
+   "chatgpt": "say:Continue.",
+   "vscode": "pass"
+  },
+  "shift+cmd+f20": {
+   "claude": "say:Yes, go ahead.",
+   "chatgpt": "say:Yes, go ahead.",
+   "vscode": "pass"
+  },
+  "ctrl+shift+cmd+f13": {
+   "claude": "say:Run the tests and fix any that fail.",
+   "chatgpt": "say:Run the tests and fix any that fail.",
+   "vscode": "pass"
+  },
+  "ctrl+shift+cmd+f19": {
+   "claude": "forcesend",
+   "chatgpt": "forcesend",
+   "vscode": "pass"
+  },
+  "ctrl+shift+cmd+f15": {
+   "claude": "menu:File>New Session",
+   "chatgpt": "menu:File>New Chat",
+   "vscode": "pass",
+   "chrome": "keys:cmd+l"
+  },
+  "ctrl+cmd+f14": "cycle:chrome,vscode",
+  "f19": {
+   "vscode": "keys:up",
+   "chrome": "keys:up",
+   "claude": "scroll:up",
+   "chatgpt": "scroll:up"
+  },
+  "f20": {
+   "vscode": "keys:down",
+   "chrome": "keys:down",
+   "claude": "scroll:down",
+   "chatgpt": "scroll:down"
+  },
+  "ctrl+shift+cmd+f20": "cheatsheet",
+  "ctrl+shift+cmd+f16": "nextmic",
+  "ctrl+cmd+f17": {
+   "default": "type:,",
+   "vscode": "none"
+  },
+  "ctrl+shift+cmd+f18": {
+   "vscode": "pass",
+   "claude": "voice:/btw "
+  },
+  "cmd+f13": "toggledictation",
+  "ctrl+shift+cmd+f14": {
+   "vscode": "none",
+   "default": "keys:opt+forwarddelete"
+  },
+  "ctrl+shift+cmd+f17": {
+   "vscode": "none",
+   "default": "keys:forwarddelete"
+  },
+  "ctrl+f13": {
+   "vscode": "pass",
+   "default": "keys:return"
+  },
+  "ctrl+f14": {
+   "vscode": "none",
+   "default": "keys:delete"
+  },
+  "ctrl+f15": {
+   "vscode": "none",
+   "default": "keys:opt+delete"
+  },
+  "ctrl+f16": {
+   "vscode": "none",
+   "default": "keys:space"
+  },
+  "ctrl+f17": {
+   "vscode": "none",
+   "default": "keys:tab"
+  },
+  "ctrl+shift+f17": {
+   "vscode": "none",
+   "default": "keys:shift+tab"
+  },
+  "ctrl+f18": {
+   "vscode": "pass",
+   "default": "keys:shift+return"
+  },
+  "ctrl+f19": {
+   "vscode": "none",
+   "default": "keys:cmd+z"
+  },
+  "ctrl+shift+f14": {
+   "vscode": "pass",
+   "default": "keys:shift+cmd+[",
+   "chatgpt": "menu:View>Previous Chat",
+   "claude": "menu:Go>Previous Session"
+  },
+  "ctrl+shift+f15": {
+   "vscode": "pass",
+   "default": "keys:shift+cmd+]",
+   "chatgpt": "menu:View>Next Chat",
+   "claude": "menu:Go>Next Session"
+  },
+  "ctrl+cmd+f18": {
+   "vscode": "pass",
+   "default": "keys:left"
+  },
+  "ctrl+cmd+f19": {
+   "vscode": "pass",
+   "default": "keys:right"
+  },
+  "ctrl+shift+f18": {
+   "vscode": "pass"
+  },
+  "ctrl+shift+f19": {
+   "vscode": "pass",
+   "default": "keys:cmd+shift+z"
+  },
+  "f13": "voice",
+  "f14": "app:claude",
+  "f15": "app:chatgpt",
+  "f16": {
+   "claude": "focus",
+   "chatgpt": "focus",
+   "vscode": "pass"
+  },
+  "cmd+f18": {
+   "claude": "keys:cmd+return",
+   "chatgpt": "send"
+  }
+ }
+}

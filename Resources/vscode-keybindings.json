@@ -1,0 +1,271 @@
+[
+ {
+  "key": "enter",
+  "command": "-renameFile",
+  "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+ },
+ {
+  "key": "enter",
+  "command": "explorer.openAndPassFocus",
+  "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+ },
+ {
+  "key": "enter",
+  "command": "list.toggleExpand",
+  "when": "filesExplorerFocus && foldersViewVisible && explorerResourceIsFolder && !inputFocus"
+ },
+ {
+  "key": "f16",
+  "command": "explorer.openAndPassFocus",
+  "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+ },
+ {
+  "key": "f16",
+  "command": "list.toggleExpand",
+  "when": "filesExplorerFocus && foldersViewVisible && explorerResourceIsFolder && !inputFocus"
+ },
+ {
+  "key": "ctrl+f13",
+  "command": "explorer.openAndPassFocus",
+  "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+ },
+ {
+  "key": "ctrl+f13",
+  "command": "list.toggleExpand",
+  "when": "filesExplorerFocus && foldersViewVisible && explorerResourceIsFolder && !inputFocus"
+ },
+ {
+  "key": "ctrl+f13",
+  "command": "workbench.action.acceptSelectedQuickOpenItem",
+  "when": "inQuickOpen"
+ },
+ {
+  "key": "ctrl+f13",
+  "command": "list.select",
+  "when": "listFocus && !inputFocus && !filesExplorerFocus && !inQuickOpen"
+ },
+ {
+  "key": "ctrl+f13",
+  "command": "runCommands",
+  "args": {
+   "commands": [
+    "workbench.view.explorer",
+    "workbench.files.action.focusFilesExplorer"
+   ]
+  },
+  "when": "(editorTextFocus || activeWebviewPanelId == 'markdown.preview') && !inQuickOpen"
+ },
+ {
+  "key": "ctrl+f18",
+  "command": "runCommands",
+  "args": {
+   "commands": [
+    "workbench.view.explorer",
+    "workbench.files.action.focusFilesExplorer",
+    "list.focusDown",
+    "explorer.openAndPassFocus"
+   ]
+  },
+  "when": "!terminalFocus && !inQuickOpen"
+ },
+ {
+  "key": "ctrl+shift+f18",
+  "command": "runCommands",
+  "args": {
+   "commands": [
+    "workbench.view.explorer",
+    "workbench.files.action.focusFilesExplorer",
+    "list.focusUp",
+    "explorer.openAndPassFocus"
+   ]
+  },
+  "when": "!terminalFocus && !inQuickOpen"
+ },
+ {
+  "key": "ctrl+cmd+f18",
+  "command": "editorScroll",
+  "args": {
+   "to": "up",
+   "by": "line",
+   "value": 2
+  },
+  "when": "editorTextFocus && !inQuickOpen"
+ },
+ {
+  "key": "ctrl+cmd+f18",
+  "command": "list.focusUp",
+  "when": "listFocus && !inputFocus && !inQuickOpen"
+ },
+ {
+  "key": "ctrl+cmd+f18",
+  "command": "workbench.action.quickOpenSelectPrevious",
+  "when": "inQuickOpen"
+ },
+ {
+  "key": "ctrl+cmd+f19",
+  "command": "editorScroll",
+  "args": {
+   "to": "down",
+   "by": "line",
+   "value": 2
+  },
+  "when": "editorTextFocus && !inQuickOpen"
+ },
+ {
+  "key": "ctrl+cmd+f19",
+  "command": "list.focusDown",
+  "when": "listFocus && !inputFocus && !inQuickOpen"
+ },
+ {
+  "key": "ctrl+cmd+f19",
+  "command": "workbench.action.quickOpenSelectNext",
+  "when": "inQuickOpen"
+ },
+ {
+  "key": "shift+cmd+f14",
+  "command": "workbench.action.previousEditorInGroup"
+ },
+ {
+  "key": "shift+cmd+f16",
+  "command": "workbench.action.nextEditorInGroup"
+ },
+ {
+  "key": "shift+cmd+f15",
+  "command": "workbench.action.closeActiveEditor"
+ },
+ {
+  "key": "shift+cmd+f18",
+  "command": "workbench.action.revertAndCloseActiveEditor"
+ },
+ {
+  "key": "ctrl+shift+f19",
+  "command": "undo",
+  "when": "editorTextFocus"
+ },
+ {
+  "key": "ctrl+shift+f15",
+  "command": "workbench.action.closeOtherEditors"
+ },
+ {
+  "key": "shift+cmd+f17",
+  "command": "runCommands",
+  "args": {
+   "commands": [
+    "workbench.view.explorer",
+    "workbench.files.action.focusFilesExplorer"
+   ]
+  },
+  "when": "!filesExplorerFocus"
+ },
+ {
+  "key": "shift+cmd+f17",
+  "command": "workbench.action.focusActiveEditorGroup",
+  "when": "filesExplorerFocus"
+ },
+ {
+  "key": "ctrl+shift+cmd+f18",
+  "command": "runCommands",
+  "args": {
+   "commands": [
+    "markdown.showPreviewToSide",
+    "workbench.action.focusPreviousGroup"
+   ]
+  },
+  "when": "editorTextFocus && editorLangId == markdown && !multipleEditorGroups"
+ },
+ {
+  "key": "ctrl+shift+cmd+f18",
+  "command": "workbench.action.closeEditorsInOtherGroups",
+  "when": "editorTextFocus && editorLangId == markdown && multipleEditorGroups"
+ },
+ {
+  "key": "ctrl+shift+cmd+f18",
+  "command": "workbench.action.closeActiveEditor",
+  "when": "activeWebviewPanelId == 'markdown.preview'"
+ },
+ {
+  "key": "ctrl+shift+cmd+f18",
+  "command": "runCommands",
+  "args": {
+   "commands": [
+    "explorer.openAndPassFocus",
+    "markdown.showPreviewToSide",
+    "workbench.action.focusPreviousGroup"
+   ]
+  },
+  "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus && resourceLangId == markdown"
+ },
+ {
+  "key": "shift+cmd+f13",
+  "command": "workbench.view.scm"
+ },
+ {
+  "key": "ctrl+shift+f14",
+  "command": "workbench.action.gotoSymbol"
+ },
+ {
+  "key": "ctrl+shift+cmd+f15",
+  "command": "workbench.action.terminal.toggleTerminal"
+ },
+ {
+  "key": "ctrl+shift+cmd+f19",
+  "command": "workbench.action.quickOpen"
+ },
+ {
+  "key": "ctrl+shift+cmd+f13",
+  "command": "runCommands",
+  "args": {
+   "commands": [
+    "workbench.action.focusFirstEditorGroup",
+    "workbench.action.closeEditorsInOtherGroups",
+    "workbench.action.closePanel",
+    "workbench.action.closeAuxiliaryBar",
+    "workbench.action.focusActiveEditorGroup"
+   ]
+  }
+ },
+ {
+  "key": "shift+cmd+f19",
+  "command": "workbench.action.toggleSidebarVisibility"
+ },
+ {
+  "key": "shift+cmd+f20",
+  "command": "workbench.action.toggleAuxiliaryBar"
+ },
+ {
+  "key": "cmd+1",
+  "command": "workbench.action.openEditorAtIndex1"
+ },
+ {
+  "key": "cmd+2",
+  "command": "workbench.action.openEditorAtIndex2"
+ },
+ {
+  "key": "cmd+3",
+  "command": "workbench.action.openEditorAtIndex3"
+ },
+ {
+  "key": "cmd+4",
+  "command": "workbench.action.openEditorAtIndex4"
+ },
+ {
+  "key": "cmd+5",
+  "command": "workbench.action.openEditorAtIndex5"
+ },
+ {
+  "key": "cmd+6",
+  "command": "workbench.action.openEditorAtIndex6"
+ },
+ {
+  "key": "cmd+7",
+  "command": "workbench.action.openEditorAtIndex7"
+ },
+ {
+  "key": "cmd+8",
+  "command": "workbench.action.openEditorAtIndex8"
+ },
+ {
+  "key": "cmd+9",
+  "command": "workbench.action.openEditorAtIndex9"
+ }
+]
