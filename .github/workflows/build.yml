@@ -1,17 +1,28 @@
 name: build
 
+# Cheap by design: every push runs the layout checks on Linux (almost no Actions minutes).
+# The macOS build (macOS minutes cost about 10x) runs only on pull requests, or by hand:
+# Actions → build → Run workflow.
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: macos-latest
+  check:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - name: Check the layout
         run: python3 scripts/check-layout.py --public
       - name: Key docs up to date
         run: python3 scripts/make-keys-doc.py && git diff --exit-code docs/keys.md docs/keys.zh-CN.md
+
+  build:
+    if: github.event_name != 'push'
+    needs: check
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
       - name: Build (public, Apple silicon + Intel)
         run: ./build.sh --public --universal --no-install
