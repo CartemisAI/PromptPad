@@ -38,8 +38,7 @@ Install your build with `./build.sh`. `./scripts/make-signing-cert.sh` once keep
 
 Describe what changes for the person pressing the keys, and how you tried it (which app, which keys).
 If the layout changes, run `python3 scripts/make-keys-doc.py` to update docs/keys*.md, and include a key map screenshot.
-CI checks the layout and that docs/keys*.md are up to date on every push (on Linux); the macOS build runs on pull
-requests, or by hand from the Actions tab.
+CI checks the layout and that docs/keys*.md are up to date, then makes a public macOS build, on every push and pull request.
 
 ## Languages
 
